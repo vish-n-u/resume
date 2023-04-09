@@ -1,11 +1,11 @@
-import cssLogo from "./cssLogo.png";
-import mongodbLogo from "./mongodbLogo.png";
-import htmlLogo from "./html5Logo.png";
-import mysqlLogo from "./mysqlLogo.png";
-import reactLogo from "./reactLogo.png";
-import expressLogo from "./exressLogo.png";
-import jsLogo from "./jsLogo.png";
-import tailwindLogo from "./tailwindLogo.png";
+import cssLogo from "../images/cssLogo.png";
+import mongodbLogo from "../images/mongodbLogo.png";
+import htmlLogo from "../images/html5Logo.png";
+import mysqlLogo from "../images/mysqlLogo.png";
+import reactLogo from "../images/reactLogo.png";
+import expressLogo from "../images/exressLogo.png";
+import jsLogo from "../images/jsLogo.png";
+import tailwindLogo from "../images/tailwindLogo.png";
 
 export const arr = [
   "I am a Fullstack developer",

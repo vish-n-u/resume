@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { arr, tms, abtMyself, name, connectArr } from "../utils/constants";
-import avatar3 from "../utils/avatar3.jpg";
+import avatar3 from "../images/avatar3.jpg";
 
 function Header() {
   const [myInfo, setMyInfo] = useState("");
