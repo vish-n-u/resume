@@ -62,12 +62,14 @@ function Header() {
       <img
         className=" mt-10 rounded-full h-52 w-52 lg:h-72 lg:w-72 bg-slate-800"
         src={avatar3}
+        alt="logo"
       ></img>
       <div className="flex w-screen justify-around lg:justify-evenly md:justify-around">
         {connectArr.map((info) => {
           return (
             <img
               src={info.img}
+              alt="logo"
               className="cursor-pointer h-12 w-12 mt-10 lg:h-16 lg:w-16 md:h-16 md:w-16"
               onClick={() => {
                 window.open(info.link, "_blank");

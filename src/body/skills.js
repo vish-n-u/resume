@@ -23,7 +23,7 @@ const Skills = () => {
               <div
                 className={`box-content  animate animate__animated  lg:${
                   inView
-                    ? index % 2 == 0
+                    ? index % 2 === 0
                       ? "animate__fadeInRight"
                       : "animate__fadeInLeft"
                     : ""
@@ -31,6 +31,7 @@ const Skills = () => {
               >
                 <img
                   className="h-32 w-36 p-4  lg:h-36 lg:w-40  md:h-36 md:w-40 "
+                  alt="img.src"
                   src={logo}
                 ></img>
               </div>
