@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import * as te from "tw-elements";
+
 import "./index.css";
 
 import App from "./App";
