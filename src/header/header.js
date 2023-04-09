@@ -51,11 +51,11 @@ function Header() {
       <div className="text-4xl mt-32 font-extrabold font-serif text-blue-500">
         {name}
       </div>
-      <div className="text-lg text-lime-black m-2 mt-3 font-mono font-semibold">
+      <div className="text-lg  text-slate-600 m-2 mt-3 font-serif font-bold">
         {myInfo + "|"}
       </div>
       <div className=" lg:w-1/2 md:w-1/2 flex align-middle justify-center content-center lg:text-center md:text-center ">
-        <h1 className="text-base m-4 text-slate-500 md:text-lg lg:text-lg">
+        <h1 className="text-base  m-4 text-slate-500 md:text-lg lg:text-lg">
           {abtMyself}
         </h1>
       </div>
