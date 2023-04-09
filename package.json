@@ -13,7 +13,6 @@
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "tailwindcss-animatecss": "^3.0.4",
-    "tw-elements": "^1.0.0-beta1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
