@@ -25,7 +25,7 @@ export const tms = (
       if (isIncreasing) {
         setMyInfo(myInfo + arr[arrElement][posInArr]);
         setPosInArr(posInArr + 1);
-        if (posInArr == arr[arrElement].length - 1) {
+        if (posInArr === arr[arrElement].length - 1) {
           setIsIncreasing(false);
           clearTimeout(timeout);
           setIsTimeoutCleared(true);
@@ -38,7 +38,7 @@ export const tms = (
       } else {
         setMyInfo(myInfo.slice(0, posInArr - 1));
         setPosInArr(posInArr - 1);
-        if (posInArr == 1) {
+        if (posInArr === 1) {
           if (arrElement + 1 < arr.length) {
             setArrElement(arrElement + 1);
           } else {
@@ -53,7 +53,7 @@ export const tms = (
       if (isIncreasing) {
         setMyInfo(myInfo + arr[arrElement][posInArr]);
         setPosInArr(posInArr + 1);
-        if (posInArr == arr[arrElement].length - 1) {
+        if (posInArr === arr[arrElement].length - 1) {
           setIsIncreasing(false);
           clearTimeout(timeout);
           setIsTimeoutCleared(true);
@@ -66,7 +66,7 @@ export const tms = (
       } else {
         setMyInfo(myInfo.slice(0, posInArr - 1));
         setPosInArr(posInArr - 1);
-        if (posInArr == 1) {
+        if (posInArr === 1) {
           if (arrElement + 1 < arr.length) {
             setArrElement(arrElement + 1);
           } else {
