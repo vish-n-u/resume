@@ -54,7 +54,7 @@ function Header() {
       <div className="text-lg text-lime-black m-2 mt-3 font-mono font-semibold">
         {myInfo + "|"}
       </div>
-      <div className=" w-1/2 flex align-middle justify-center content-center items-center text-center">
+      <div className=" lg:w-1/2 md:w-1/2 flex align-middle justify-center content-center lg:text-center md:text-center ">
         <h1 className="text-base m-4 text-slate-500 md:text-lg lg:text-lg">
           {abtMyself}
         </h1>
