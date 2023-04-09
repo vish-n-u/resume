@@ -28,7 +28,7 @@ function Header() {
       seconds,
       arr
     );
-  }, [myInfo, isTimeoutCleared]);
+  }, [myInfo, isTimeoutCleared, arrElement, posInArr, isIncreasing]);
 
   return (
     <div className="flex flex-col justify-center items-center mt-5">
