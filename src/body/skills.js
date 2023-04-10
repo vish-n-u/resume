@@ -3,9 +3,22 @@ import { skillsArr } from "../utils/constants";
 import "animate.css";
 import "tailwindcss-animatecss";
 import { useInView } from "react-intersection-observer";
+import projectArr from "../utils/projects";
 const Skills = () => {
-  const { ref, inView } = useInView({
+  const [ref, inView] = useInView({
     threshold: 0.5, // set the threshold for when the element should be considered in view
+    triggerOnce: false, // set triggerOnce to false to re-animate the element on subsequent scrolls
+  });
+  const [fE, inViewfE] = useInView({
+    threshold: 0.7, // set the threshold for when the element should be considered in view
+    triggerOnce: false, // set triggerOnce to false to re-animate the element on subsequent scrolls
+  });
+  const [bE, inViewbE] = useInView({
+    threshold: 0.8, // set the threshold for when the element should be considered in view
+    triggerOnce: false, // set triggerOnce to false to re-animate the element on subsequent scrolls
+  });
+  const [fS, inViewfS] = useInView({
+    threshold: 0.1, // set the threshold for when the element should be considered in view
     triggerOnce: false, // set triggerOnce to false to re-animate the element on subsequent scrolls
   });
   return (
@@ -21,7 +34,7 @@ const Skills = () => {
           {skillsArr.map((logo, index) => {
             return (
               <div
-                className={`box-content  animate animate__animated  lg:${
+                className={`box-content  animate animate__animated  ${
                   inView
                     ? index % 2 === 0
                       ? "animate__fadeInRight"
@@ -39,24 +52,73 @@ const Skills = () => {
           })}
         </div>
       </div>
-      <div className="flex justify-center w-screen  ">
-        {console.log(ref, inView)}
-        <div
-          ref={ref}
-          className={`animate animate__animated  ${
-            inView ? "animate__fadeInLeft" : ""
-          }`}
-        >
-          Hello, world!
-        </div>
-        <div
-          ref={ref}
-          className={`animate animate__animated  ${
-            inView ? "animate__fadeInRight" : ""
-          }`}
-        >
-          Hello, Girl!
-        </div>
+      <div className="flex  flex-col content-centre align-middle items-center  mt-10 justify-center w-screen  ">
+        <h1 className="w-full flex mt-10 text-3xl  ml-3 font-serif lg:justify-center  lg:font-bold">
+          Projects
+        </h1>
+        {Object.keys(projectArr).map((val, index) => {
+          return (
+            <>
+              <h1 className="flex w-full ml-5 justify-start mt-10 text-lg font-semibold">
+                {val}
+              </h1>
+              <div
+                ref={val === "backend" ? bE : val === "frontend" ? fE : fS}
+                className={`w-full  animate animate__animated flex flex-col lg:flex-row md:flex-row items-center content-center    lg:px-14 md:px-8  shadow-lg  m-5 rounded-lg`}
+              >
+                {" "}
+                {Object.keys(projectArr[val]).map((result, index) => {
+                  console.log(result);
+                  return (
+                    <div
+                      className={`bg-blue-200 h-40 w-3/4 md:max-w-xl lg:max-w-[400px] lg:h-60 md:h-52 md:w-2/5  lg:w-2/5 m-5  animate animate__animated box-content group relative overflow-hidden    rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400 
+                ${
+                  val === "backend" && inViewbE && window.screen.width > 767
+                    ? index % 2 === 0
+                      ? "animate__fadeInRight"
+                      : "animate__fadeInLeft"
+                    : ""
+                } 
+                ${
+                  val === "frontend" && inViewfE && window.screen.width > 767
+                    ? index % 2 === 0
+                      ? "animate__fadeInRight"
+                      : "animate__fadeInLeft"
+                    : ""
+                }
+                ${
+                  val === "fullStack" && inViewfS && window.screen.width > 767
+                    ? index % 2 === 0
+                      ? "animate__fadeInRight"
+                      : "animate__fadeInLeft"
+                    : ""
+                }
+                `}
+                    >
+                      {projectArr?.[val][result]?.img && (
+                        <img
+                          className=""
+                          src={projectArr[val][result].img}
+                        ></img>
+                      )}
+                      <div class="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity"></div>
+                      <a href="www.google.com" target="_blank">
+                        <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/2  transition-all duration-500">
+                          video
+                        </div>
+                      </a>
+                      <a href="www.google.com" target="_blank">
+                        <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3  z-40 group-hover:bottom-1/2  transition-all duration-700">
+                          code
+                        </div>
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          );
+        })}
       </div>
     </>
   );
