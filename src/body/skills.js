@@ -112,14 +112,18 @@ const Skills = () => {
                                 "https://www.google.com"
                           }
                           target="_blank"
-                          rel="noreferrer noopener"
+                          rel="noopener noreferrer"
                         >
                           <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/3 group-hover:pt-9 group-hover:mt-9   transition-all duration-500">
                             {projectArr[val][result]?.link ? "view" : "video"}
                           </div>
                         </a>
 
-                        <a href={projectArr[val][result]?.code} target="_blank">
+                        <a
+                          href={projectArr[val][result]?.code}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3   z-40 group-hover:bottom-1/2  transition-all duration-700">
                             code
                           </div>
