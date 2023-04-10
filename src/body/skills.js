@@ -71,7 +71,7 @@ const Skills = () => {
                   console.log(result);
                   return (
                     <div
-                      className={`bg-blue-200 h-40 w-3/4 md:max-w-xl lg:max-w-[400px] lg:h-60 md:h-52 md:w-2/5  lg:w-2/5 m-5  animate animate__animated box-content group relative overflow-hidden    rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400 
+                      className={`bg-blue-200 aspect-video  w-3/4 md:max-w-xl lg:max-w-[400px]  md:w-2/5  lg:w-2/5 m-5  animate animate__animated box-content group relative overflow-hidden    rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400 
                 ${
                   val === "backend" && inViewbE && window.screen.width > 767
                     ? index % 2 === 0
@@ -102,17 +102,19 @@ const Skills = () => {
                           alt="projectImg"
                         ></img>
                       )}
-                      <div class="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity"></div>
-                      <a href="www.google.com" target="_blank">
-                        <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/2  transition-all duration-500">
-                          video
-                        </div>
-                      </a>
-                      <a href="www.google.com" target="_blank">
-                        <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3  z-40 group-hover:bottom-1/2  transition-all duration-700">
-                          code
-                        </div>
-                      </a>
+                      <div class="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity">
+                        <a href="www.google.com" target="_blank">
+                          <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/3 group-hover:pt-9 group-hover:mt-9   transition-all duration-500">
+                            {projectArr[val][result]?.link ? "link" : "video"}
+                          </div>
+                        </a>
+
+                        <a href="www.google.com" target="_blank">
+                          <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3   z-40 group-hover:bottom-1/2  transition-all duration-700">
+                            code
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   );
                 })}
