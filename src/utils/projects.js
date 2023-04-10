@@ -2,14 +2,14 @@ import resumeImg from "../images/resumeImg.jpg";
 
 let projectArr = {
   backend: {
-    Ecommerce: {
-      code: "",
+    "Movie-Booking-App": {
+      code: "https://github.com/vish-n-u/4relevel_batch3n4_mba",
     },
     "CRM-application": {
-      code: "",
+      code: "https://github.com/vish-n-u/crmApp",
     },
     FlightBooking: {
-      code: "",
+      code: "https://github.com/vish-n-u/fligh-Booking-App",
     },
   },
   frontend: {
@@ -23,7 +23,7 @@ let projectArr = {
       img: "",
       video: "",
       link: "",
-      code: "",
+      code: "https://github.com/vish-n-u/youtubeClone",
     },
     "Swiggy-clone": {
       img: "",

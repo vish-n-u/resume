@@ -23,7 +23,7 @@ const Skills = () => {
   });
   return (
     <>
-      <div className=" lg:mt-44 md:mt-44">
+      <div className=" lg:mt-44 md:mt-44 ">
         <h1 className="mt-10 text-3xl flex ml-3 font-serif lg:justify-center  lg:font-bold">
           Skills
         </h1>
@@ -52,83 +52,102 @@ const Skills = () => {
           })}
         </div>
       </div>
-      <div className="flex  flex-col content-centre align-middle items-center  mt-10 justify-center w-screen  ">
+      <div className="flex   flex-col content-centre align-middle items-center  mt-10 justify-center w-screen  ">
         <h1 className="w-full flex mt-10 text-3xl  ml-3 font-serif lg:justify-center  lg:font-bold">
           Projects
         </h1>
         {Object.keys(projectArr).map((val, index) => {
           return (
             <>
-              <h1 className="flex w-full ml-5 justify-start mt-10 text-lg font-semibold">
+              <h1
+                className={`flex w-full ml-5 justify-start mt-10 text-lg font-semibold`}
+              >
                 {val}
               </h1>
               <div
                 ref={val === "backend" ? bE : val === "frontend" ? fE : fS}
-                className={`w-full  animate animate__animated flex flex-col lg:flex-row md:flex-row items-center content-center    lg:px-14 md:px-8  shadow-lg  m-5 rounded-lg`}
+                className={`w-full  animate animate__animated flex flex-col lg:flex-row md:flex-row items-center content-center shadow-lg  m-5 rounded-lg `}
               >
                 {" "}
                 {Object.keys(projectArr[val]).map((result, index) => {
                   console.log(result);
                   return (
                     <div
-                      className={`bg-blue-200 aspect-video  w-3/4 md:max-w-xl lg:max-w-[400px]  md:w-2/5  lg:w-2/5 m-5  animate animate__animated box-content group relative overflow-hidden    rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400 
-                ${
-                  val === "backend" && inViewbE && window.screen.width > 767
-                    ? index % 2 === 0
-                      ? "animate__fadeInRight"
-                      : "animate__fadeInLeft"
-                    : ""
-                } 
-                ${
-                  val === "frontend" && inViewfE && window.screen.width > 767
-                    ? index % 2 === 0
-                      ? "animate__fadeInRight"
-                      : "animate__fadeInLeft"
-                    : ""
-                }
-                ${
-                  val === "fullStack" && inViewfS && window.screen.width > 767
-                    ? index % 2 === 0
-                      ? "animate__fadeInRight"
-                      : "animate__fadeInLeft"
-                    : ""
-                }
-                `}
+                      className={`lg:w-1/3 md:w-1/3 w-full flex flex-col justify-center items-center animate animate__animated ${
+                        val === "backend" &&
+                        inViewbE &&
+                        window.screen.width > 767
+                          ? index % 2 === 0
+                            ? "animate__fadeInRight"
+                            : "animate__fadeInLeft"
+                          : ""
+                      } 
+                    ${
+                      val === "frontend" &&
+                      inViewfE &&
+                      window.screen.width > 767
+                        ? index % 2 === 0
+                          ? "animate__fadeInRight"
+                          : "animate__fadeInLeft"
+                        : ""
+                    }
+                    ${
+                      val === "fullStack" &&
+                      inViewfS &&
+                      window.screen.width > 767
+                        ? index % 2 === 0
+                          ? "animate__fadeInRight"
+                          : "animate__fadeInLeft"
+                        : ""
+                    }`}
                     >
-                      {projectArr?.[val][result]?.img && (
-                        <img
-                          className=""
-                          src={projectArr[val][result].img}
-                          alt="projectImg"
-                          rel="noreferrer noopener"
-                        ></img>
-                      )}
-                      <div class="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity">
-                        <a
-                          href={
-                            projectArr[val][result]?.link
-                              ? projectArr[val][result]?.link
-                              : projectArr[val][result]?.video ||
-                                "https://www.google.com"
-                          }
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/3 group-hover:pt-9 group-hover:mt-9   transition-all duration-500">
-                            {projectArr[val][result]?.link ? "view" : "video"}
-                          </div>
-                        </a>
+                      <div
+                        className={`bg-blue-200  aspect-video max-w-sm w-2/3   md:w-full lg:w-full md:max-w-sm lg:max-w-[400px]   m-5   box-content group relative overflow-hidden    rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400 `}
+                      >
+                        <div>
+                          {projectArr?.[val][result]?.img && (
+                            <img
+                              className=""
+                              src={projectArr[val][result].img}
+                              alt="projectImg"
+                              rel="noreferrer noopener"
+                            ></img>
+                          )}
+                          <div class="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity">
+                            <a
+                              href={
+                                projectArr[val][result]?.link
+                                  ? projectArr[val][result]?.link
+                                  : projectArr[val][result]?.video ||
+                                    "https://www.google.com"
+                              }
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/3 pt-10 group-hover:pt-9 group-hover:mt-9   transition-all duration-500">
+                                {projectArr[val][result]?.link
+                                  ? "view"
+                                  : "video"}
+                              </div>
+                            </a>
 
-                        <a
-                          href={projectArr[val][result]?.code}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3   z-40 group-hover:bottom-1/2  transition-all duration-700">
-                            code
+                            <a
+                              href={projectArr[val][result]?.code}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3   z-40 group-hover:bottom-1/2  transition-all duration-700">
+                                code
+                              </div>
+                            </a>
                           </div>
-                        </a>
+                        </div>
                       </div>
+                      {!projectArr[val][result]?.img && (
+                        <h1 className="mb-2 transition duration-1000">
+                          {result}
+                        </h1>
+                      )}
                     </div>
                   );
                 })}
