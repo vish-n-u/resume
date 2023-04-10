@@ -99,6 +99,7 @@ const Skills = () => {
                         <img
                           className=""
                           src={projectArr[val][result].img}
+                          alt="projectImg"
                         ></img>
                       )}
                       <div class="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity"></div>
