@@ -100,16 +100,26 @@ const Skills = () => {
                           className=""
                           src={projectArr[val][result].img}
                           alt="projectImg"
+                          rel="noreferrer noopener"
                         ></img>
                       )}
                       <div class="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity">
-                        <a href="www.google.com" target="_blank">
+                        <a
+                          href={
+                            projectArr[val][result]?.link
+                              ? projectArr[val][result]?.link
+                              : projectArr[val][result]?.video ||
+                                "https://www.google.com"
+                          }
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
                           <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/3 group-hover:pt-9 group-hover:mt-9   transition-all duration-500">
-                            {projectArr[val][result]?.link ? "link" : "video"}
+                            {projectArr[val][result]?.link ? "view" : "video"}
                           </div>
                         </a>
 
-                        <a href="www.google.com" target="_blank">
+                        <a href={projectArr[val][result]?.code} target="_blank">
                           <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3   z-40 group-hover:bottom-1/2  transition-all duration-700">
                             code
                           </div>
