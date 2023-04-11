@@ -22,7 +22,7 @@ let projectArr = {
     "Youtube-clone": {
       img: "",
       video: "",
-      link: "",
+      link: "https://main--teal-muffin-4b5eff.netlify.app/",
       code: "https://github.com/vish-n-u/youtubeClone",
     },
     "Swiggy-clone": {
