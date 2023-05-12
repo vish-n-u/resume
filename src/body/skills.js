@@ -113,30 +113,35 @@ const Skills = () => {
                               rel="noreferrer noopener"
                             ></img>
                           )}
-                          <div class="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity">
-                            <a
-                              href={
-                                projectArr[val][result]?.link
-                                  ? projectArr[val][result]?.link
-                                  : projectArr[val][result]?.video ||
-                                    "https://www.google.com"
-                              }
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/3 pt-10 group-hover:pt-9 group-hover:mt-9   transition-all duration-500">
-                                {projectArr[val][result]?.link
-                                  ? "view"
-                                  : "video"}
-                              </div>
-                            </a>
-
+                          <div class="absolute inset-0 font-semibold bg-black opacity-0 hover:opacity-70 transition-opacity">
+                            {val !== "backend" && (
+                              <a
+                                href={
+                                  projectArr[val][result]?.link
+                                    ? projectArr[val][result]?.link
+                                    : projectArr[val][result]?.video ||
+                                      "https://www.google.com"
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <div className=" cursor-pointer text-xl text-white   absolute -bottom-full left-1/4 z-40 group-hover:bottom-1/3 pt-10 group-hover:pt-9 group-hover:mt-9   transition-all duration-500">
+                                  {projectArr[val][result]?.link
+                                    ? "view"
+                                    : "video"}
+                                </div>
+                              </a>
+                            )}
                             <a
                               href={projectArr[val][result]?.code}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3   z-40 group-hover:bottom-1/2  transition-all duration-700">
+                              <div
+                                className={`cursor-pointer text-xl text-white absolute -bottom-full    z-40 group-hover:bottom-1/2  transition-all duration-700 ${
+                                  val === "backend" ? "left-2/4 " : "left-2/3"
+                                }`}
+                              >
                                 code
                               </div>
                             </a>

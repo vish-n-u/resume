@@ -7,6 +7,7 @@ import expressLogo from "../images/exressLogo.png";
 import jsLogo from "../images/jsLogo.png";
 import tailwindLogo from "../images/tailwindLogo.png";
 
+
 export const arr = [
   "I am a Fullstack developer",
   "I love to reverse Engineer and build things.",

@@ -32,14 +32,14 @@ function Header() {
 
   return (
     <div className="flex flex-col justify-center items-center mt-5">
-      <div className="w-screen flex justify-around my-3 md:justify-between lg:justify-between md:my-8  lg:my-9">
+      <div className="w-screen flex justify-around my-3 md:justify-between lg:justify-between md:my-5  lg:my-6">
         <div className="text-lg font-sans mt-2 ml-3 md:ml-5 lg:ml-10 lg:text-2xl md:text-2xl">
           developedByMe
         </div>
         <button
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1_IwvzI46yhXP2xFjP1jwbVlnn4MWt9YH/view?usp=share_link",
+              "https://drive.google.com/file/d/1dlVWXaRNp9GDm3jGvAXkpZbibxEaRFoU/view?usp=share_link",
               "_blank"
             )
           }
@@ -48,7 +48,7 @@ function Header() {
           Resume
         </button>
       </div>
-      <div className="text-4xl mt-32 font-extrabold font-serif text-blue-500">
+      <div className="text-4xl mt-10 font-extrabold font-serif text-blue-500">
         {name}
       </div>
       <div className="text-lg  text-slate-600 m-2 mt-3 font-serif font-bold">

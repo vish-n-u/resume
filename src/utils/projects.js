@@ -1,4 +1,6 @@
 import resumeImg from "../images/resumeImg.jpg";
+import swiggyImg from "../images/swiggyCloneImg.JPG";
+import youtubeClone from "../images/2023-05-11.png";
 
 let projectArr = {
   backend: {
@@ -20,24 +22,18 @@ let projectArr = {
       code: "https://github.com/vish-n-u/resume",
     },
     "Youtube-clone": {
-      img: "",
+      img: youtubeClone,
       video: "",
       link: "https://main--teal-muffin-4b5eff.netlify.app/",
       code: "https://github.com/vish-n-u/youtubeClone",
     },
-    "Swiggy-clone": {
-      img: "",
-      video: "",
-      link: "",
-      code: "",
-    },
   },
   fullStack: {
-    LoginApp: {
-      img: "",
+    "Swiggy-clone": {
+      img: swiggyImg,
       video: "",
-      link: "",
-      code: "",
+      link: "https://deluxe-cuchufli-f03acb.netlify.app/",
+      code: "https://github.com/vish-n-u/foodVillaApp",
     },
   },
 };
